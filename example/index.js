@@ -8,7 +8,13 @@ const a = state(0);
 const [b, setB] = state(0);
 
 effect(() => {
+  log("effect-0");
   log("a:" + a.value);
+  log("b:" + b());
+});
+
+effect(() => {
+  log("effect-1");
   log("b:" + b());
 });
 
